@@ -2,195 +2,170 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janvi Bajpai | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Janvi Bajpai | Portfolio</title>
 
-    <style>
-        :root {
-            --primary-color: #F1EFEC;
-            --secondary-color: #D4C9BE;
-            --accent1-color: #123458;
-            --accent2-color: #030303;
-            --text-light: #D4C9BE;
-            --text-dark: #123458;
-        }
+<style>
+:root {
+    --primary-color: #F1EFEC;
+    --secondary-color: #D4C9BE;
+    --accent1-color: #123458;
+    --accent2-color: #030303;
+    --text-light: #D4C9BE;
+    --text-dark: #123458;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Segoe UI, sans-serif;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe UI, sans-serif;
+}
 
-        body {
-            background: linear-gradient(135deg, var(--accent1-color), var(--accent2-color));
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: var(--text-light);
-        }
+body {
+    background: linear-gradient(135deg, var(--accent1-color), var(--accent2-color));
+    color: var(--text-light);
+}
 
-        header {
-            text-align: center;
-            padding: 3rem 1rem;
-            background: var(--primary-color);
-            color: var(--text-dark);
+/* HEADER */
+header {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    padding: 2rem;
+}
 
-            .header-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                max-width: 900px;
-                margin: auto;
-                gap: 2rem;
-            }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    gap: 2rem;
+}
 
-            .header-text {
-                text-align: left;
-            }
+.header-text {
+    text-align: left;
+}
 
-            .header-text h1 {
-                margin-bottom: 0.5rem;
-            }
+.header-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    object-fit: cover;
+    border: 6px solid var(--secondary-color);
+}
 
-            .header-image img {
-                width: 300px;
-                height: 300px;
-                border-radius: 50px;
-                object-fit: cover;
-                border: 7px solid var(--secondary-color);
-            }
-        }
+/* SECTION */
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
 
-        header img {
-            width: 300px;
-            /* bigger size */
-            height: 300px;
-            border-radius: 50px;
-            /* curved square */
-            object-fit: cover;
-            border: 5px solid var(--secondary-color);
-            margin-bottom: 1rem;
-        }
+.card {
+    background: var(--secondary-color);
+    color: var(--accent2-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
 
-        section {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 1.5rem;
-        }
+h2 {
+    margin-bottom: 1rem;
+    color: var(--accent1-color);
+}
 
-        .card {
-            background: var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            color: var(--accent2-color);
-        }
+/* GRID */
+.projects,
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
 
-        h2 {
-            margin-bottom: 1rem;
-            color: var(--accent1-color);
-        }
+.project,
+.cert {
+    background: var(--primary-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
 
-        .projects,
-        .certificates {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
+/* IMAGE FIX */
+.cert img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
-        .project,
-        .cert {
-            background: var(--primary-color);
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: left;
-        }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-        .project h3 {
-            margin-bottom: 0.5rem;
-        }
+/* CONTACT */
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+}
 
-        .project ul {
-            padding-left: 1.2rem;
-            margin: 0.5rem 0;
-        }
+button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background: var(--accent1-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
 
-        .project ul li {
-            margin-bottom: 0.3rem;
-        }
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--accent1-color);
+}
 
-        ..cert img {
-            width: auto;
-            max-width: 100%;
-        }
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
 
-
-
-        .contact input,
-        .contact textarea {
-            width: 100%;
-            margin-top: 0.5rem;
-            padding: 0.7rem;
-            border: none;
-            border-radius: 6px;
-        }
-
-        button {
-            margin-top: 1rem;
-            padding: 0.7rem 1.5rem;
-            border: none;
-            background: var(--accent1-color);
-            color: var(--primary-color);
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-            footer {
-                text-align: center;
-                padding: 1rem;
-                background: var(--primary-color);
-                color: var(--accent1-color);
-            }
-
-            @keyframes gradientBG {
-                0% {
-                    background-position: 0% 50%;
-                }
-
-                50% {
-                    background-position: 100% 50%;
-                }
-
-                100% {
-                    background-position: 0% 50%;
-                }
-            }
-    </style>
+    .header-text {
+        text-align: center;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <div class="header-container">
+<header>
+    <div class="header-container">
 
-            <div class="header-text">
-                <h1>Janvi Bajpai</h1>
-                <p>Business Analyst Aspirant | ECE (AI/ML)</p>
-                <p>📞 8454851405</p>
-                <p>✉️ bajpaijanvi18@gmail.com</p>
-                <p>📍 Pune</p>
-            </div>
-
-            <div class="header-image">
-                <img src="images/Janvi photo.png" alt="Janvi">
-            </div>
-
+        <div class="header-text">
+            <h1>Janvi Bajpai</h1>
+            <p> Student | ECE (AI/ML)</p>
+            <p>📞 8454851405</p>
+            <p>✉️ bajpaijanvi18@gmail.com</p>
+            <p>📍 Pune</p>
         </div>
-    </header>
 
-    <section class="card">
+        <div class="header-image">
+            <img src="images/Janvi photo.png" alt="Janvi">
+        </div>
+
+    </div>
+</header>
+
+<section class="card">
         <h2>Professional Summary</h2>
         <p>
             <b> BTech ECE (AI/ML)</b> student at <b>MIT World Peace University </b>with dynamic interests across both
@@ -209,6 +184,8 @@
         </p>
         <p>CGPA: 7.82</p>
     </section>
+
+
 
     <section class="card">
         <h2>Projects</h2>
@@ -257,6 +234,7 @@
         </div>
     </section>
 
+    
     <section class="card">
         <h2>Leadership experience</h2>
         <ul>
@@ -287,7 +265,8 @@
                 Solving, Time Management</li>
         </ul>
     </section>
-    <section class="card">
+
+<section class="card">
         <h2>Awards & Achievements</h2>
         <ul>
             <li>Published an <b>article in the CDC Newsletter</b>, contributing to alumni engagement and communication
@@ -295,7 +274,7 @@
             </div>
             <div class="certificates">
                 <div class="cert">
-                    <img src="images/CDC.jpeg">
+                    <img src="images/CDC.jpeg" class="small-img">
                     <p>Article</p>
                 </div>
             </div>
@@ -303,7 +282,7 @@
             <li>Led and participated in <b>donation drives, organizing distribution of food, grains, hygiene, and
                     educational essentials to underserved communities.</b></li>
             <div class="cert">
-                <img src="images/DD.png">
+                <img src="images/DD.png" class="small-img">
 
             </div>
             </div>
@@ -319,8 +298,8 @@
 
         </ul>
     </section>
-
-    <section class="card">
+    
+ <section class="card">
         <h2>Certificates</h2>
 
         <div class="certificates">
@@ -368,7 +347,7 @@
         </div>
     </section>
 
-    <section class="card contact">
+<section class="card contact">
         <h2>Contact</h2>
         <div class="contact">
             <h3>Janvi Karunesh Bajpai</h3>
@@ -381,10 +360,10 @@
 
     </section>
 
-    <footer>
-        <p>© 2026 Janvi Bajpai</p>
-    </footer>
+
+<footer>
+    <p>© 2026 Janvi Bajpai</p>
+</footer>
 
 </body>
-
 </html>
