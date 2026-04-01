@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janvi Bajpai | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #F1EFEC;
+            --secondary-color: #D4C9BE;
+            --accent1-color: #123458;
+            --accent2-color: #030303;
+            --text-light: #D4C9BE;
+            --text-dark: #123458;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--accent1-color), var(--accent2-color));
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text-light);
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: var(--primary-color);
+            color: var(--text-dark);
+
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 900px;
+                margin: auto;
+                gap: 2rem;
+            }
+
+            .header-text {
+                text-align: left;
+            }
+
+            .header-text h1 {
+                margin-bottom: 0.5rem;
+            }
+
+            .header-image img {
+                width: 300px;
+                height: 300px;
+                border-radius: 50px;
+                object-fit: cover;
+                border: 7px solid var(--secondary-color);
+            }
+        }
+
+        header img {
+            width: 300px;
+            /* bigger size */
+            height: 300px;
+            border-radius: 50px;
+            /* curved square */
+            object-fit: cover;
+            border: 5px solid var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+        }
+
+        .card {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            color: var(--accent2-color);
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            color: var(--accent1-color);
+        }
+
+        .projects,
+        .certificates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .project,
+        .cert {
+            background: var(--primary-color);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .project h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project ul {
+            padding-left: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .project ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        ..cert img {
+            width: auto;
+            max-width: 100%;
+        }
+
+
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            margin-top: 0.5rem;
+            padding: 0.7rem;
+            border: none;
+            border-radius: 6px;
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            background: var(--accent1-color);
+            color: var(--primary-color);
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .small-img {
+            .small-img {
+                width: 1200px;
+                height: auto;
+            }
+
+            footer {
+                text-align: center;
+                padding: 1rem;
+                background: var(--primary-color);
+                color: var(--accent1-color);
+            }
+
+            @keyframes gradientBG {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="header-text">
+                <h1>Janvi Bajpai</h1>
+                <p>Business Analyst Aspirant | ECE (AI/ML)</p>
+                <p>📞 8454851405</p>
+                <p>✉️ bajpaijanvi18@gmail.com</p>
+                <p>📍 Pune</p>
+            </div>
+
+            <div class="header-image">
+                <img src="images/Janvi photo.png" alt="Janvi">
+            </div>
+
+        </div>
+    </header>
+
+    <section class="card">
+        <h2>Professional Summary</h2>
+        <p>
+            <b> BTech ECE (AI/ML)</b> student at <b>MIT World Peace University </b>with dynamic interests across both
+            <b>technical and
+                extracurricular domains.</b> Passionate about the software field and AI/ML, with hands-on experience in
+            AI-based
+            signal analysis and IoT projects. Strong inclination towards <b>leadership, teamwork, and management,</b>
+            with
+            experience in organizing initiatives, coordinating teams, and handling responsibilities effectively.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Education</h2>
+        <p><b>BTech Electronics and Communication Engineering with(AI/ML)</b> - MIT-World Peace University (2023–2027)
+        </p>
+        <p>CGPA: 7.82</p>
+    </section>
+
+    <section class="card">
+        <h2>Projects</h2>
+        <div class="projects">
+
+            <div class="project">
+                <h3>Neera Quality Monitoring</h3>
+                <p><b>Role:</b> Student Researcher</p>
+                <ul>
+                    <li>Analyzed quality degradation over time observed ~60–70% freshness decline</li>
+                    <li>Documented insights using data tools</li>
+                </ul>
+                <p><b>Tech:</b> Arduino, Sensors, Excel</p>
+            </div>
+
+            <div class="project">
+                <h3>AI-Based Gearbox Anomaly Detection</h3>
+                <p><b>Role:</b> Lead Developer</p>
+                <ul>
+                    <li>Built ML models using sound data
+                        using KNN, Decision Tree, Random Forest</li>
+                    <li>Achieved ~88.6% accuracy</li>
+                </ul>
+                <p><b>Tech:</b> MATLAB</p>
+            </div>
+
+            <div class="project">
+                <h3>Heat Aid (Startup)</h3>
+                <p><b>Role:</b> Co-Founder</p>
+                <ul>
+                    <li>Developing wearable heating glove
+                        targeting arthritis patients</li>
+                    <li>Prototype designing phase</li>
+                </ul>
+                <p><b>Tech:</b> Product Design,</p>
+            </div>
+
+            <div class="project">
+                <h3>Smart Garbage Monitoring</h3>
+                <ul>
+                    <li>Monitored garbage levels using sensors</li>
+                    <li>Improved waste management efficiency</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Leadership experience</h2>
+        <ul>
+            <li><b>General Secretary – RIDE’25</b></li>
+            Led the planning and execution of MIT World Peace University’s flagship innovation event, making sure
+            everything ran smoothly.
+            Worked with multiple teams to manage logistics and coordinate different aspects of the event from
+            start to finish.
+            <li><b>Skills:</b>Leadership, Team management, Event operations, Budget</li>
+
+            <br>
+            <li><b>Company Relations Head – Innovation Hub</b></li>
+            Managed corporate partnerships, sponsorships, and negotiations.
+            Led budgeting, finance management, and fund allocation for the club.
+            Handled documentation, MoU drafting, and data management (Excel, reports).
+            Planned and executed events while leading and coordinating teams.
+            <li><b>Skills:</b> Leadership, Sponsorship, Finance & Budgeting, Negotiation, MoU Drafting, Event
+                Management, Data Management (Excel, Word, Google Forms)</li>
+
+            <br>
+            <li><b>Student Leader – Under 25 Summit (MIT-WPU)</b></li>
+            Led on-ground execution and coordination for the Under 25 Summit at MIT-WPU.
+            Managed and guided student volunteers to ensure smooth event operations.
+            Coordinated with organizing teams for logistics, crowd management, and scheduling.
+            Contributed to creating an engaging and well-organized experience for participants.
+
+            <li><b>Skills:</b> Leadership, Team Management, Event Coordination, Communication, Crowd Management, Problem
+                Solving, Time Management</li>
+        </ul>
+    </section>
+    <section class="card">
+        <h2>Awards & Achievements</h2>
+        <ul>
+            <li>Published an <b>article in the CDC Newsletter</b>, contributing to alumni engagement and communication
+                initiatives.</li>
+            </div>
+            <div class="certificates">
+                <div class="cert">
+                    <img src="images/CDC.jpeg" class="small-img">
+                    <p>Article</p>
+                </div>
+            </div>
+
+            <li>Led and participated in <b>donation drives, organizing distribution of food, grains, hygiene, and
+                    educational essentials to underserved communities.</b></li>
+            <div class="cert">
+                <img src="images/DD.png" class="small-img">
+
+            </div>
+            </div>
+
+
+            <li>Participated in <b>Smart India Hackathon</b> for two consecutive years, building solutions in a
+                competitive team environment.</li>
+            <div class="cert">
+                <img src="images/SIH.jpeg">
+                <p>Smart India Hacathon 2026</p>
+            </div>
+            </div>
+
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Certificates</h2>
+
+        <div class="certificates">
+
+            <div class="cert">
+                <img src="images/Certi..jpg">
+                <p>Industrial Training- AIML</p>
+            </div>
+
+            <div class="cert">
+                <img src="images/PBI.png">
+                <p>Personal Financial Planning</p>
+            </div>
+
+            <div class="cert">
+                <img src="images/CSI.jpeg">
+                <p>Crime Scene Investigation Contest</p>
+            </div>
+
+            <div class="cert">
+                <img src="images/FP.png">
+                <p>Personal Financial Planning</p>
+            </div>
+
+            <div class="cert">
+                <img src="images/MSD.png">
+                <p>Measuring Sustainable Development</p>
+            </div>
+
+            <div class="cert">
+                <img src="images/SEL.png">
+                <p>Social-Emotional Learning</p>
+            </div>
+
+            <div class="cert">
+                <img src="images/CTPS.png">
+                <p>Critical Thinking and Problem Solving</p>
+            </div>
+
+            <div class="cert">
+                <img src="images/TC.png">
+                <p>Teamwork and Collaboration</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="card contact">
+        <h2>Contact</h2>
+        <div class="contact">
+            <h3>Janvi Karunesh Bajpai</h3>
+
+
+            <p>Phone: 8454851405</p>
+            <p>Email: bajpaijanvi18@gmail.com</p>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Janvi Bajpai</p>
+    </footer>
+
+</body>
+
+</html>
